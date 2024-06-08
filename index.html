@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .polymorphism-filter {
+            backdrop-filter: blur(10px) saturate(200%);
+            -webkit-backdrop-filter: blur(10px) saturate(200%);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-lg polymorphism-filter">
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Student Registration Form</h1>
+            <p class="text-gray-600">Please fill out the form below to register.</p>
+        </header>
+        <hr class="mb-6">
+        <main>
+            <form action="https://example.com/submit" method="post" class="space-y-6">
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700">Personal Information</legend>
+                    <div class="mb-4">
+                        <label for="first-name" class="block text-gray-700">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="last-name" class="block text-gray-700">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="dob" class="block text-gray-700">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Gender:</label>
+                        <div class="flex items-center space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" id="male" name="gender" value="male" required class="mr-2">
+                                <span>Male</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" id="female" name="gender" value="female" class="mr-2">
+                                <span>Female</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" id="other" name="gender" value="other" class="mr-2">
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email:</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                </fieldset>
+                <hr class="my-6">
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700">Address Information</legend>
+                    <div class="mb-4">
+                        <label for="address" class="block text-gray-700">Address:</label>
+                        <textarea id="address" name="address" rows="4" required class="mt-1 block w-full p-2 border rounded-md shadow-sm"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="city" class="block text-gray-700">City:</label>
+                        <input type="text" id="city" name="city" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="state" class="block text-gray-700">State:</label>
+                        <input type="text" id="state" name="state" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="zip" class="block text-gray-700">ZIP Code:</label>
+                        <input type="text" id="zip" name="zip" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                </fieldset>
+                <hr class="my-6">
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700">Educational Information</legend>
+                    <div class="mb-4">
+                        <label for="highschool" class="block text-gray-700">High School:</label>
+                        <input type="text" id="highschool" name="highschool" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="gpa" class="block text-gray-700">GPA:</label>
+                        <input type="text" id="gpa" name="gpa" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="major" class="block text-gray-700">Intended Major:</label>
+                        <input type="text" id="major" name="major" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="graduation-year" class="block text-gray-700">Year of Graduation:</label>
+                        <input type="number" id="graduation-year" name="graduation-year" min="1900" max="2100" required class="mt-1 block w-full p-2 border rounded-md shadow-sm">
+                    </div>
+                </fieldset>
+                <hr class="my-6">
+                <fieldset class="border p-4 rounded-md">
+                    <legend class="text-xl font-semibold text-gray-700">Additional Information</legend>
+                    <div class="mb-4">
+                        <label for="interests" class="block text-gray-700">Interests and Hobbies:</label>
+                        <textarea id="interests" name="interests" rows="4" class="mt-1 block w-full p-2 border rounded-md shadow-sm"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="comments" class="block text-gray-700">Additional Comments:</label>
+                        <textarea id="comments" name="comments" rows="4" class="mt-1 block w-full p-2 border rounded-md shadow-sm"></textarea>
+                    </div>
+                </fieldset>
+                <hr class="my-6">
+                <div class="text-center">
+                    <input type="submit" value="Register" class="px-4 py-2 bg-purple-600 text-white font-semibold rounded-md shadow-sm hover:bg-purple-700">
+                </div>
+            </form>
+        </main>
+        <hr class="my-6">
+        <footer class="text-center">
+            <p class="text-gray-600">&copy; 2024 Student Registration. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
